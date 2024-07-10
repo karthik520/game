@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background Image Swap</title>
+    <style>
+        body {
+            background-image: url('lion-wild-africa-african.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const imageSources = [
+            'pexels-photo-325044.webp', 'pexels-photo-414144.jpeg', 'pexels-photo-1213447.jpeg', 'pexels-photo-1183099.jpeg', 
+            'pexels-photo-1270184.webp', 'pexels-photo-1270184.webp', 'pexels-photo-1402787.jpeg', 'pexels-photo-1413412.webp', 
+            'pexels-photo-1485894.jpeg', 'pexels-photo-1624496.jpeg'
+        ];
+
+        function changeBackgroundImage() {
+            const randomIndex = Math.floor(Math.random() * imageSources.length);
+            document.body.style.backgroundImage = `url(${imageSources[randomIndex]})`;
+        };
+
+
+        // Change the background image every 5 seconds (1000 milliseconds)
+        setInterval(changeBackgroundImage, 1000);
+
+    </script>
+</body>
+</html>
